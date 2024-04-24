@@ -1,0 +1,145 @@
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+
+header {
+    height: 50px;
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow: 1;
+    text-align: start;
+}
+
+nav ul {
+    display: flex;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #000;
+}
+
+ul li {
+    margin: 10px 10px;
+}
+
+.sub-menu {
+    display: none;
+    padding: 10px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.first-second-sub-menu, .second-second-sub-menu {
+    display: none;
+    padding: 10px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li:hover > ul{
+    display: block;
+}
+
+li p {
+    position: relative;
+}
+
+li p i:nth-child(2) {
+    position: absolute;
+    padding-right: 10px;
+    top: 35%;
+    right: 0;
+}
+
+li a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sidebar {
+    width: 20%;
+    height: 100%;
+    padding: 20px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.sidebar ul li p {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.sidebar ul li:hover > .sub-menu {
+    display: block;
+}
+
+.sidebar ul li:hover > p {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.first-toggle-checkbox, .second-toggle-checkbox {
+    display: none;
+}
+
+.first-toggle-checkbox:checked + ul.first-second-sub-menu {
+    display: block;
+}
+
+.first-toggle-checkbox:not(:checked) + ul.first-second-sub-menu {
+    display: none;
+}
+
+.second-toggle-checkbox:checked + ul.second-second-sub-menu {
+    display: block;
+}
+
+.second-toggle-checkbox:not(:checked) + ul.second-second-sub-menu {
+    display: none;
+}
+
+.first-toggle-checkbox:focus + ul {
+    display: none;
+}
+
+.second-toggle-checkbox:focus + ul {
+    display: none;
+}
+
+#opens-first-second-sub-menu,
+#opens-second-second-sub-menu {
+    cursor: pointer;
+}
+
+#opens-first-second-sub-menu:hover,
+#opens-second-second-sub-menu:hover {
+    background: #E5E5E5;
+}
