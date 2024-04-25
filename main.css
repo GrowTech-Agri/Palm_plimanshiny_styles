@@ -64,9 +64,9 @@ ul li {
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
-nav ul li:hover > ul{
+/* nav ul li:hover > ul{
     display: block;
-}
+} */
 
 li p {
     position: relative;
@@ -97,16 +97,26 @@ li a {
     border-radius: 10px;
 }
 
-.sidebar ul li:hover > .sub-menu {
-    display: block;
-}
-
-.sidebar ul li:hover > p {
+.sidebar ul li:hover > p, .sidebar ul li:hover > label p {
     background-color: #28a745;
     color: #fff;
 }
 
-.first-toggle-checkbox, .second-toggle-checkbox {
+#opens-first-second-sub-menu,
+#opens-second-second-sub-menu {
+    cursor: pointer;
+}
+
+#opens-first-second-sub-menu:hover,
+#opens-second-second-sub-menu:hover {
+    background: #E5E5E5;
+}
+
+.analyze-orthomosaics-checkbox:checked + ul.sub-menu {
+    display: block;
+}
+
+.first-toggle-checkbox, .second-toggle-checkbox, .analyze-orthomosaics-checkbox {
     display: none;
 }
 
@@ -134,12 +144,3 @@ li a {
     display: none;
 }
 
-#opens-first-second-sub-menu,
-#opens-second-second-sub-menu {
-    cursor: pointer;
-}
-
-#opens-first-second-sub-menu:hover,
-#opens-second-second-sub-menu:hover {
-    background: #E5E5E5;
-}
